@@ -4,21 +4,20 @@
 import os
 from conans import ConanFile, CMake, tools
 
-
 class CppZmqConan(ConanFile):
     name = "cppzmq"
     version = "4.4.1"
-    url = "https://github.com/bincrafters/conan-cppzmq"
+    url = "https://github.com/zinnion/conan-cppzmq"
     homepage = "https://github.com/zeromq/cppzmq"
     description = "C++ binding for 0MQ"
-    author = "Bincrafters <bincrafters@gmail.com>"
+    author = "Zinnion <mauro@zinnion.com>"
     license = "MIT"
     topics = ("conan", "cppzmq", "zmq-cpp", "zmq", "cpp-bind")
     exports = ["LICENSE.md"]
     exports_sources = ["CMakeLists.txt"]
     generators = "cmake"
     no_copy_source = True
-    requires = "zmq/4.2.5@bincrafters/stable"
+    requires = "zmq/4.3.1@zinnion/stable"
 
     @property
     def _source_subfolder(self):
